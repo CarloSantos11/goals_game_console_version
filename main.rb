@@ -1,41 +1,56 @@
-require "./user"
-require "./goal"
-require "./setup"
+
+require "./game"
 
 # Introduction
 # Query for amount of users
 # Each User in turn will enter 5 goals
 # User assigns each goals title and description
 #######################################
-all_users = get_users
-puts all_users
+# TESTING THE GET_USERS AND MENU METHODS
+#
+# all_users = Game.get_users
+# puts Game.menu
 #####################################
-# we have returned our list of users
+# TESTING THE EXECUTE METHOD
+#
+# pseudocode
+# create a hash of users?
 
-# puts "#" * 5 + " What's the next move " + "#" * 5
-puts "#" * 60
-puts "%20s" % "#{"#" * 10}" + " What's the next move " + "#{"#" * 10}\n\n"
-puts "%22s" % "#{"#" * 10}" + " 1)Execute a Goal " + "#{"#" * 10}"
-puts "%23s" % "#{"#" * 10}" + " 2)Check Goals " + "#{"#" * 10}"
-puts "%23s" % "#{"#" * 9}" + " 3)Check Score " + "#{"#" * 8}"
-puts "#" * 60 + "\n\n"
+=begin
+we will have created all our users for the game.
+we prompt for the next step 
+we will say execute goal
+we ask for which user
+we get the specified user
+was ask which goal we would like to delete for a particular user.
 
-# we know want to know what our users want to do
+lets pass in 
+=end
 
-#### WHAT'S THE NEXT MOVE ####
-# execut a goal
-# view the score
+# Create a goal
+=begin
+goal_1 = Goal.new("Become Infinite", "Meditate for 5 mins daily")
+goal_2 = Goal.new("Get Money", "Find the other stream of Revenue. Side Hussle")
+goal_3 = Goal.new("Make sure you find your flow state daily", "Do something that challenges you as well as taps into your creativity")
+goal_4 = Goal.new("Finish Goals Game", "Get Assistance From Wayne")
+goal_5 = Goal.new("Finish Rails App", "Find a way to deploy")
 
-# carlo.name = "name Change" # this should not work
-# carlo.goals = "goal change" # this is not the way we want to assign goals
-# carlo.to_s
+goals = { goal_1.title => goal_1, goal_2.title => goal_2, goal_3.title => goal_3 }
+# Assign it to a User
+carlo = User.new("Carlo", "antcs07@gmail.com", goals)
+puts carlo
 
-# new_goal = Goal.new("Call The Church", "Make sure we can get married")
-# new_goal_2 = Goal.new("Program Daily", "Spend 30 minutes a day programming")
+# Know execute goal one
+# Become Infinite
+# carlo.execute_goal("Become Infinite")
+# puts carlo
 
-# carlo << new_goal
-# carlo << new_goal_2
-# puts carlo.to_s
-# carlo.execute_goal(new_goal)
-# puts carlo.to_s
-# puts carlo.goals
+# Game.prompt_execution_sequence
+=end
+# Game.get_users_testing_suite
+# Game.prompt_execution_sequence
+
+Game.select(1, Game.get_users_testing_suite)
+
+# Game.get_users_testing_suite
+# Game.menu
