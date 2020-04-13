@@ -10,6 +10,8 @@ require "./game"
 #
 # all_users = Game.get_users
 # puts Game.menu
+Game.game_engine
+
 #####################################
 # TESTING THE EXECUTE METHOD
 #
@@ -50,7 +52,7 @@ puts carlo
 # Game.get_users_testing_suite
 # Game.prompt_execution_sequence
 
-Game.select(1, Game.get_users_testing_suite)
+# Game.select(1, Game.get_users_testing_suite)
 
 # Game.get_users_testing_suite
 # Game.menu
