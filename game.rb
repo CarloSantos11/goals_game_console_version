@@ -224,7 +224,7 @@ class Game
     users.each do |user_id, user|
       # if statement to update winner_score
       if user.points > winner_score[1]
-        winner_score[0] = user.name               { "var": "value"}
+        winner_score[0] = user.name
         winner_score[1] = user.points
       end
       puts user
